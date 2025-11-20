@@ -1,6 +1,7 @@
-const accessToken = "dee0df19a954aeab90df14d8f812690726c582f1";
-const deviceID = "0a10aced202194944a0674bc";
+const accessToken = process.env.PARTICLE_ACCESS_TOKEN;
+const deviceID = process.env.PARTICLE_DEVICE_ID;
 const url = `https://api.particle.io/v1/devices/${deviceID}/rele`;
+
 
 async function enviarComando(comando) {
     try {

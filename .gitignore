@@ -1,0 +1,35 @@
+# ==========================
+# Archivos de entorno (API Keys)
+# ==========================
+.env            # Aquí guardarás accessToken y deviceID
+.env.local
+.env.* 
+*.env
+
+# ==========================
+# Node / Vercel / JS
+# ==========================
+node_modules/
+.vercel/
+.next/
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# ==========================
+# Configuración
+# ==========================
+.vscode/
+.idea/
+*.swp
+
+# ==========================
+# Sistema operativo
+# ==========================
+.DS_Store
+Thumbs.db
