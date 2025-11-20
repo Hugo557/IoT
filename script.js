@@ -1,6 +1,6 @@
 const accessToken = "dee0df19a954aeab90df14d8f812690726c582f1";
 const deviceID = "0a10aced202194944a0674bc";
-const url = `https://api.particle.io/v1/devices/${deviceID}/led`;
+const url = `https://api.particle.io/v1/devices/${deviceID}/rele`;
 
 async function enviarComando(comando) {
     try {
@@ -11,7 +11,7 @@ async function enviarComando(comando) {
         });
 
         document.getElementById("estado").textContent = 
-            comando === "on" ? "LED encendido" : "LED apagado";
+            comando === "on" ? "Foco ENCENDIDO" : "Foco APAGADO";
 
         console.log("Comando enviado:", comando);
     } catch (error) {

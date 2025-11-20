@@ -1,42 +1,41 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f5f5f5;
     text-align: center;
-    padding-top: 60px;
+    background: #f2f2f2;
+    padding-top: 50px;
 }
 
 h1 {
-    color: #222;
-    margin-bottom: 40px;
+    font-size: 32px;
+    color: #333;
 }
 
 .botones {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 20px;
 }
 
 button {
-    background-color: #1e90ff;
-    color: white;
-    border: none;
-    padding: 14px 30px;
+    padding: 15px 30px;
     font-size: 18px;
-    border-radius: 8px;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
+    color: white;
 }
 
-button:hover {
-    opacity: 0.85;
+#btnOn {
+    background: #2ecc71;
 }
 
 #btnOff {
-    background-color: #ff4b4b;
+    background: #e74c3c;
 }
 
 #estado {
-    margin-top: 30px;
+    margin-top: 25px;
+    color: #555;
     font-size: 20px;
-    color: #444;
 }
