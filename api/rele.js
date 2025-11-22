@@ -47,4 +47,10 @@ export default async function handler(req, res) {
             respuesta: data
         });
 
-    } catch (error)
+    } catch (error) {
+        return res.status(500).json({
+            error: "Error enviando comando al Particle",
+            detalle: String(error)
+        });
+    }
+}
