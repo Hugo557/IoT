@@ -4,24 +4,28 @@ var gHum = null;
 document.addEventListener("DOMContentLoaded", () => {
 
     // ==== TEMPERATURA ====
-    gTemp = new JustGage({
-        id: "gaugeTemp",
-        value: 0,
-        min: 0,
-        max: 60,
-        label: "°C",
-        levelColors: ["#4caf50", "#ffc107", "#f44336"]
-    });
+   gTemp = new JustGage({
+    id: "gaugeTemp",
+    value: 0,
+    min: 0,
+    max: 60,
+    label: "°C",
+    symbol: " °C",
+    levelColors: ["#4caf50", "#ffc107", "#f44336"]
+});
+
 
     // ==== HUMEDAD ====
     gHum = new JustGage({
-        id: "gaugeHum",
-        value: 0,
-        min: 0,
-        max: 100,
-        label: "%",
-        levelColors: ["#2196f3", "#00bcd4", "#3f51b5"]
-    });
+    id: "gaugeHum",
+    value: 0,
+    min: 0,
+    max: 100,
+    label: "%",
+    symbol: " %",
+    levelColors: ["#2196f3", "#00bcd4", "#3f51b5"]
+});
+
 
     actualizar();
 });
