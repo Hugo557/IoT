@@ -3,7 +3,7 @@ var gHum = null;
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ==== GAGE TEMPERATURA ====
+    // ==== TEMPERATURA ====
     gTemp = new JustGage({
         id: "gaugeTemp",
         value: 0,
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         levelColors: ["#4caf50", "#ffc107", "#f44336"]
     });
 
-    // ==== GAGE HUMEDAD ====
+    // ==== HUMEDAD ====
     gHum = new JustGage({
         id: "gaugeHum",
         value: 0,
@@ -27,12 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// ===============================
-//     FUNCIÓN PRINCIPAL
-// ===============================
 function actualizar() {
 
-    // ---- TEMPERATURA ----
+    // ---------- TEMPERATURA ----------
     $.get("/api/temperatura", (data) => {
         let t = parseFloat(data.valor);
         gTemp.refresh(t);
@@ -40,7 +37,7 @@ function actualizar() {
     });
 
 
-    // ---- HUMEDAD ----
+    // ---------- HUMEDAD ----------
     $.get("/api/humedad", (data) => {
         let h = parseFloat(data.valor);
         gHum.refresh(h);
@@ -53,9 +50,7 @@ function actualizar() {
 }
 
 
-// ===============================
-//     INDICADOR DE MODO
-// ===============================
+// ---------- ESTADO ----------
 function evaluarEstado() {
 
     let t = parseFloat($("#tempVal").text());
