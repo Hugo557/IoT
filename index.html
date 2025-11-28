@@ -2,21 +2,44 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Control de Foco - Particle</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Práctica 29 - Temperatura y Humedad</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- JustGage + Raphael -->
+    <script src="https://cdn.jsdelivr.net/npm/raphael@2.3.0/raphael.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/justgage@1.6.1/justgage.min.js"></script>
+
+    <script src="/script.js" defer></script>
 </head>
 
 <body>
 
-    <h1>Control del Foco</h1>
+    <h1>Práctica 29 – Control Automático</h1>
 
-    <div class="botones">
-        <button id="btnOn">ENCENDER</button>
-        <button id="btnOff">APAGAR</button>
+    <div id="panel">
+
+        <div class="box">
+            <h3>Temperatura</h3>
+            <div id="gaugeTemp" class="gauge"></div>
+            <p id="tempVal">-- °C</p>
+        </div>
+
+        <div class="box">
+            <h3>Humedad</h3>
+            <div id="gaugeHum" class="gauge"></div>
+            <p id="humVal">-- %</p>
+        </div>
+
+        <div class="box" id="estadoBox">
+            <h3>Estado</h3>
+            <p id="estado">---</p>
+        </div>
+
     </div>
 
-    <p id="estado"></p>
-
-    <script src="script.js"></script>
 </body>
 </html>
