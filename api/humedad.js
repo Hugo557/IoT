@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         return res.status(500).json({ error: "Variables privadas no configuradas en Vercel" });
     }
 
-    const url = `https://api.particle.io/v1/devices/${deviceID}/humedad`;
+    const url = `https://api.particle.io/v1/devices/${deviceID}/porcentajeA1`;
 
     try {
         const particleRes = await fetch(url, {
@@ -23,17 +23,18 @@ export default async function handler(req, res) {
 
         const data = await particleRes.json();
 
+        // Manejo de errores de Particle
         if (!particleRes.ok) {
             return res.status(500).json({
-                error: "Error leyendo variable en Particle",
+                error: "Error leyendo la variable en Particle",
                 detalle: data
             });
         }
 
         return res.status(200).json({
             ok: true,
-            valor: data.result,
-            raw: data
+            valor: data.result,  // Humedad porcentual
+            raw: data            // Info completa
         });
 
     } catch (error) {

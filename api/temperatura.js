@@ -23,6 +23,7 @@ export default async function handler(req, res) {
 
         const data = await particleRes.json();
 
+        // Particle devuelve error si la variable no existe o device está offline
         if (!particleRes.ok) {
             return res.status(500).json({
                 error: "Error leyendo variable en Particle",
@@ -32,8 +33,8 @@ export default async function handler(req, res) {
 
         return res.status(200).json({
             ok: true,
-            valor: data.result,
-            raw: data
+            valor: data.result,   // número recibido
+            raw: data             // respuesta original por si se ocupa
         });
 
     } catch (error) {
